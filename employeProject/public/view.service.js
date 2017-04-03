@@ -4,12 +4,12 @@ var employ=angular.module("employee");
 
 employ.service('employeeService', ['$http',function($http){
 
-    $http.get("../dataSource/validation.js") .then(function(response) {
+   this.value = $http.get("../dataSource/validation.json").then(function(response) {
         //First function handles success
-         this.value=  response.data.validation;
+         return  response.data;
     }, function(response) {
         //Second function handles error
-        this.value=  "Something went wrong";
+        return  "Something went wrong";
     });
 
 // console.log(this.value);
