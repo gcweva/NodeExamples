@@ -1,0 +1,14 @@
+{ "validation":[  
+   {  
+      "validationRule":"employeeName",
+      "validationErrorMessage":"Not a valid Name",
+      "validationName":"^(a-zA-Z){5-12}$"
+   },
+   {  
+      "validationRule":"employeeEmail",
+      "validationErrorMessage":"Not a valid Email",
+      "validationName":"^(a-zA-Z){2-10}@(a-zA-Z){2-10}.(a-zA-Z){2-4}$"
+   }
+]
+
+}

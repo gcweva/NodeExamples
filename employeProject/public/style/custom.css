@@ -1,0 +1,9 @@
+.mark{
+    height: 300px;
+}
+.align{
+    text-align: center;
+}
+.error{
+    border: 2px solid red!important;
+}

@@ -1,0 +1,35 @@
+ <alert type="danger" ng-show="true">{{employee.error}}</alert>
+  <alert type="sucess" ng-show="true">{{employee.sucess}}</alert>
+ 
+ <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date Of Birth</th>
+        <th>Gender</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <form class="form">
+            <td><input class="form-control" type="text" ng-model="employee.name" employee-directive id="eName">
+            </td>
+            <td><input class="form-control" type="email" ng-model="employee.email" employee-directive id="eMail">
+            </td>
+            <td><input class="form-control" type="date" ng-model="employee.dob" employee-directive id="eDob">
+            </td>
+            <td><input class="form-control" type="text" ng-model="employee.gender" employee-directive id="eGender">
+            </td>
+            <td><input class="form-control" type="text" ng-model="employee.age" employee-directive id="eAge">
+            </td>
+            </form>
+             <td><button type="button"class="btn btn-success" ng-disabled="employee.name && employee.email && employee.dob && employee.gender && employee.age">Add Employee</button>
+             <td><button type="button"class="btn btn-success">Update Employee</button></td>
+             <td><button type="button"class="btn btn-danger">Delete Employee</button>
+            </td>
+        </tr>
+      
+    </tbody>
+  </table>
