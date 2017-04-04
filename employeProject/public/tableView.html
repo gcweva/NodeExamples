@@ -14,20 +14,20 @@
     <tbody>
         <tr>
             <form class="form">
-            <td><input class="form-control" type="text" ng-model="employee.name" employee-directive id="eName">
+            <td><input class="form-control" type="text" ng-model="employee.name" employee-directive id="eName" validation-name="employeeName">
             </td>
-            <td><input class="form-control" type="email" ng-model="employee.email" employee-directive id="eMail">
+            <td><input class="form-control" type="email" ng-model="employee.email" employee-directive id="eMail" validation-name="employeeEmail">
             </td>
             <td><input class="form-control" type="date" ng-model="employee.dob" employee-directive id="eDob">
             </td>
             <td><input class="form-control" type="text" ng-model="employee.gender" employee-directive id="eGender">
             </td>
-            <td><input class="form-control" type="text" ng-model="employee.age" employee-directive id="eAge">
+            <td><input class="form-control" type="text" ng-model="employee.age" employee-directive id="eAge" ng-disabled="true">
             </td>
             </form>
-             <td><button type="button"class="btn btn-success" ng-disabled="employee.name && employee.email && employee.dob && employee.gender && employee.age">Add Employee</button>
-             <td><button type="button"class="btn btn-success">Update Employee</button></td>
-             <td><button type="button"class="btn btn-danger">Delete Employee</button>
+             <td><button type="button"class="btn btn-success" ng-click="addEmployee(employee)">Add Employee</button>
+             <td><button type="button"class="btn btn-success" ng-click="addEmployee(employee)">Update Employee</button></td>
+             <td><button type="button"class="btn btn-danger" ng-click="deleteEmployee(employee)">Delete Employee</button>
             </td>
         </tr>
       

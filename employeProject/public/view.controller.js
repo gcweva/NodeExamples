@@ -6,6 +6,14 @@ employ.controller('employeeController',['$scope','$http','employeeService',funct
 
 console.log(employeeService.value);
 
+$scope.addEmployee=function(employee){
+console.log(employee);
+
+}
+
+
+
+
 
 }]);
 

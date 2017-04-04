@@ -2,7 +2,7 @@
 'use strict';
 var employ=angular.module("employee");
 
-employ.directive('employeeDirective', [function(){
+employ.directive('employeeDirective', ['employeeService',function(employeeService){
   return {
     restrict: 'AC',
     require: 'ngModel',
@@ -11,7 +11,19 @@ employ.directive('employeeDirective', [function(){
 
         elem.on('blur', function (event) {
           console.log(event.target.value);
-          if (event.target.value==="null" ||event.target.value==="unk") {
+
+        var errorRegex=null;
+         var errorMessage=null;
+         var a= event.target.getAttribute('validation-name');
+         console.log(employeeService);
+         angular.forEach(employeeService.value.$$state.value.validation,function(k,v){
+        if(k.validationName===a){
+        errorRegex=new RegExp(k.validationRule);
+        errorMessage=k.validationErrorMessage;
+        }
+    });
+
+          if (!errorRegex.test(event.target.value)) {
           angular.element("#"+event.target.id).addClass("error");
           angular.element('#' + event.target.id).attr("data-original-title", "bad name" );
 

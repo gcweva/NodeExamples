@@ -4,13 +4,13 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "dependencies": {
+    "body-parser": "^1.14.2",
     "express": "3.2.6",
-    "jade": "*",
     "express-session": "^1.12.1",
-    "mongoose": "^4.3.4",
-    "body-parser": "^1.14.2"
+    "jade": "*",
+    "mongoose": "^4.9.3"
   }
 }

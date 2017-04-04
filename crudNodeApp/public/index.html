@@ -23,7 +23,9 @@
 <body>
 	<div class="container" ng-controller="AppCtrl">
 		<br />
-		<h1 align="center">MEAN Application - Employee Directory App</h1>
+		<div class="jumbotron">
+    	<h1 style="text-align: center">Employee Directory Application</h1>
+		</div>
 		<br />
 		<br />
 		<table class="table">
@@ -41,12 +43,12 @@
 			<tbody>
 				<tr>
 					<form>
-						<td><input class="form-control" ng-model="employee.Name" required placeholder="Name" /></td>
-						<td><input type="email" ng-model="employee.Email" required class="form-control" placeholder="abc@xyz.com" /></td>
-						<td><input type="text" ng-model="employee.Date_of_birth" id="datepicker" class="form-control" required placeholder="YYYY-MM-DD" /></td>
-						<td><input ng-model="employee.Department" required class="form-control" placeholder="Department" /></td>
-						<td><input ng-model="employee.Gender" required class="form-control" placeholder="Gender" /></td>
-						<td ng-if="employee.age"><input type="number" ng-model="employee.Age" disabled class="form-control" placeholder="Age" /></td>
+						<td><input class="form-control" ng-model="employee.Name" required placeholder="Name" id="ename" /></td>
+						<td><input type="email" ng-model="employee.Email" required class="form-control" placeholder="abc@xyz.com" id="dob" /></td>
+						<td><input type="text" ng-model="employee.Date_of_birth" ng-blur="prefillAge(employee.Date_of_birth)" id="datepicker" class="form-control" required placeholder="YYYY-MM-DD" /></td>
+						<td><input ng-model="employee.Department" required class="form-control" placeholder="Department" id="dept"/></td>
+						<td><input ng-model="employee.Gender" required class="form-control" placeholder="Gender" id="gender"/></td>
+						<td ><input type="number" ng-model="employee.Age" disabled class="form-control" placeholder="Age" id="age" /></td>
 						<td><button class="btn btn-success btn-md" ng-click="addEmployee()">Add	Employee</button>
 						<td><button class="btn btn-success btn-md" ng-click="updateEmployee()">Update Employee</button></td>
 					</form>
