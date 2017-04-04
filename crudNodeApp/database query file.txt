@@ -6,8 +6,8 @@ db.createCollection("employees")
 db.employees.insert(
     {
         
-        "Name": "Ashwini",
-        "Email": "ashwini@asd.net",
+        "Name": "Ankur Sharma",
+        "Email": "Ankur@asd.net",
         "Date_of_birth": "1993-12-25",
         "Department": "Web",
         "Gender": "Female",
@@ -15,8 +15,8 @@ db.employees.insert(
     },
 	{
         
-        "Name": "abc",
-        "Email": "abc@asd.net",
+        "Name": "ajay",
+        "Email": "ajayabc@asd.net",
         "Date_of_birth": "2015-12-02",
         "Department": "web",
         "Gender": "Male",
