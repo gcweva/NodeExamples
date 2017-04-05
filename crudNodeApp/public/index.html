@@ -1,42 +1,28 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="employeeApp">
 <head>
 <meta charset="ISO-8859-1">
 <title>Node Mean Project</title>
 <link href="/libs/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script src="/libs/js/angular.min.js"></script>
-<script src="/controllers/controller.js"></script>
-<script>
-  $(function() {
-    var datepicker=$("#datepicker").datepicker(
-                    {changeMonth:true,changeYear:true,maxDate:"-1M -1D -1Y",dateFormat:"yy-mm-dd"}
-                                              );
-    $("#datepicker").bind("keydown", function (event) {
-       event.preventDefault();
-     });
-  });
-  </script>
+
 </head>
 <body>
-	<div class="container" ng-controller="AppCtrl">
+	<div class="container" ng-controller="employeeController">
 		<br />
 		<div class="jumbotron">
     	<h1 style="text-align: center">Employee Directory Application</h1>
 		</div>
 		<br />
 		<br />
-		<table class="table">
+		<table class="table table-hover">
 			<thead>
 				<tr>
-					<td>Name</td>
-					<td>Email</td>
-					<td>Date of Birth</td>
-					<td>Department</td>
-					<td>Gender</td>
-					<td>Age</td>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Date of Birth</th>
+					<th>Department</th>
+					<th>Gender</th>
+					<th>Age</th>
 				</tr>
 			</thead>
 
@@ -45,7 +31,7 @@
 					<form>
 						<td><input class="form-control" ng-model="employee.Name" required placeholder="Name" id="ename" /></td>
 						<td><input type="email" ng-model="employee.Email" required class="form-control" placeholder="abc@xyz.com" id="dob" /></td>
-						<td><input type="text" ng-model="employee.Date_of_birth" ng-blur="prefillAge(employee.Date_of_birth)" id="datepicker" class="form-control" required placeholder="YYYY-MM-DD" /></td>
+						<td><input type="text" ng-model="employee.Date_of_birth"  id="datepicker" class="form-control" required placeholder="YYYY-MM-DD" /></td>
 						<td><input ng-model="employee.Department" required class="form-control" placeholder="Department" id="dept"/></td>
 						<td><input ng-model="employee.Gender" required class="form-control" placeholder="Gender" id="gender"/></td>
 						<td ><input type="number" ng-model="employee.Age" disabled class="form-control" placeholder="Age" id="age" /></td>
@@ -72,6 +58,20 @@
 		</table>
 	</div>
 
-
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="/libs/js/angular.min.js"></script>
+<script src="/controllers/controller.js"></script>
+<script>
+  $(function() {
+    var datepicker=$("#datepicker").datepicker(
+                    {changeMonth:true,changeYear:true,maxDate:"-1M -1D -1Y",dateFormat:"yy-mm-dd"}
+                                              );
+    $("#datepicker").bind("keydown", function (event) {
+       event.preventDefault();
+     });
+  });
+  </script>
 </body>
 </html>

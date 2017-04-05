@@ -1,11 +1,8 @@
-var myApp = angular.module('myApp', []);
-myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {    
+var myApp = angular.module('employeeApp', []);
+myApp.controller('employeeController', ['$scope', '$http', function($scope, $http) {    
 
 
-  $scope.prefillAge=function(age){
-    if(age && $scope.employee && !$scope.employee.Age){ 
-        $scope.employee.Age= Math.floor((new Date() - new Date(data.Date_of_birth))/(365*24*60*60*1000));
-    }  }
+  
     
   var updateView=function(){
          $http.get('/employee').success(function(response) {
